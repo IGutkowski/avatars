@@ -1,0 +1,31 @@
+POST http://localhost:8080/api/profile/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyX3VzZXIiLCJpYXQiOjE3MzMxNzA2NzEsImV4cCI6MTczMzI1NzA3MX0.4o_1DuctXKpUsR0pNxzlDFhlY2OzOi2E7AOcvFdA5KM
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="testfota.jpg"
+Content-Type: image/jpeg
+
+< C:/Users/igor0/Desktop/testfota.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### POST request to register a new user (can be admin)
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "userName": "igorgutkowski",
+  "password": "haslohaslo",
+  "email": "exampleee@gmail.com",
+  "role": "USER",
+  "creationDate": "2021-06-01T00:00:00.000Z"
+}
+
+### POST request to authenticate and receive Bearer token
+POST http://localhost:8080/auth/authenticate
+Content-Type: application/json
+
+{
+  "userName": "igorgutkowski",
+  "password": "haslohaslo"
+}
